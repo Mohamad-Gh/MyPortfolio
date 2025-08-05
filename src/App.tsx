@@ -41,7 +41,7 @@ import {
 } from "react-icons/si";
 // import Skills from "./components/skills/Skills";
 // import SkillsGPT from "./components/skills/SkillsGPT";
-import SkillsG from "./components/skills/SkillsG";
+import SkillsG from "./components/skills/SkillsOrbit";
 
 const skillIconsOuter = [
   FaReact,
