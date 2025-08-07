@@ -2,34 +2,34 @@ import { motion } from "framer-motion";
 import Skills from "@/components/Skills";
 import ProjectsPreview from "@/components/ProjectPreview";
 import AboutContact from "@/components/AboutContact";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 export default function App() {
-  const [imageUrl, setImageUrl] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
+  //   const [imageUrl, setImageUrl] = useState<string | null>(null);
+  //   const [error, setError] = useState<string | null>(null);
+  //   const [loading, setLoading] = useState<boolean>(true);
 
-  useEffect(() => {
-    const fetchImage = async () => {
-      try {
-        const response = await fetch("https://picsum.photos/400");
-        if (!response.ok) {
-          throw new Error("Failed to fetch image");
-        }
-        // No need for response.json() since the API returns the image directly
-        setImageUrl("https://picsum.photos/400"); // Use the URL directly
-        setLoading(false);
-      } catch (err: unknown) {
-        // Handle unknown error type safely
-        setError(
-          err instanceof Error ? err.message : "An unknown error occurred"
-        );
-        setLoading(false);
-      }
-    };
+  //   useEffect(() => {
+  //     const fetchImage = async () => {
+  //       try {
+  //         const response = await fetch("https://picsum.photos/400");
+  //         if (!response.ok) {
+  //           throw new Error("Failed to fetch image");
+  //         }
+  //         // No need for response.json() since the API returns the image directly
+  //         setImageUrl("https://picsum.photos/400"); // Use the URL directly
+  //         setLoading(false);
+  //       } catch (err: unknown) {
+  //         // Handle unknown error type safely
+  //         setError(
+  //           err instanceof Error ? err.message : "An unknown error occurred"
+  //         );
+  //         setLoading(false);
+  //       }
+  //     };
 
-    fetchImage();
-  }, []);
+  //     fetchImage();
+  //   }, []);
 
   //   if (loading) return <div>Loading...</div>;
   //   if (error) return <div>Error: {error}</div>;
