@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Skills from "@/components/Skills";
 import ProjectsPreview from "@/components/ProjectPreview";
 import AboutContact from "@/components/AboutContact";
+import ContactForm from "@/components/ContactForm";
 // import { useEffect, useState } from "react";
 
 export default function App() {
@@ -86,6 +87,7 @@ export default function App() {
           {/* About and Contacts */}
           <AboutContact />
         </div>
+        <ContactForm />
       </main>
     </>
   );

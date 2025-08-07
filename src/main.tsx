@@ -42,7 +42,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <Suspense fallback={<LoadingPage />}>
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         <RouterProvider router={router} />
       </AnimatePresence>
     </Suspense>{" "}
