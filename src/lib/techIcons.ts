@@ -1,0 +1,51 @@
+import {
+  FaReact,
+  FaNodeJs,
+  FaDocker,
+  FaJs,
+  FaPython,
+  FaGitAlt,
+  FaAws,
+  FaFigma,
+  FaDatabase,
+  FaJava,
+  FaGithub,
+  FaHtml5,
+  FaCss3Alt,
+  FaSass,
+} from "react-icons/fa";
+import {
+  SiTailwindcss,
+  SiTypescript,
+  SiMongodb,
+  SiExpress,
+  SiGraphql,
+  SiRedux,
+  SiVite,
+} from "react-icons/si";
+
+import { type IconType } from "react-icons";
+
+export const techIcons: Record<string, IconType> = {
+  React: FaReact,
+  JavaScript: FaJs,
+  TypeScript: SiTypescript,
+  Tailwind: SiTailwindcss,
+  HTML: FaHtml5,
+  CSS: FaCss3Alt,
+  Sass: FaSass,
+  Redux: SiRedux,
+  Node: FaNodeJs,
+  Express: SiExpress,
+  MongoDB: SiMongodb,
+  GraphQL: SiGraphql,
+  Docker: FaDocker,
+  AWS: FaAws,
+  Git: FaGitAlt,
+  GitHub: FaGithub,
+  Figma: FaFigma,
+  Database: FaDatabase,
+  Java: FaJava,
+  Vite: SiVite,
+  Python: FaPython,
+};
