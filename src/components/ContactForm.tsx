@@ -1,5 +1,5 @@
 // src/components/ContactForm.tsx
-import { useForm } from "react-hook-form";
+import { useForm, type SubmitHandler } from "react-hook-form";
 
 type FormData = {
   name: string;
@@ -17,7 +17,7 @@ export default function ContactForm() {
     mode: "onBlur", // validate on blur
   });
 
-  const onSubmit = async (data: FormData) => {
+  const onSubmit: SubmitHandler<FormData> = async (data) => {
     // Simulate async submission (e.g. API call)
     await new Promise((r) => setTimeout(r, 1500));
     alert(`Thank you for your message, ${data.name}!`);
@@ -45,6 +45,9 @@ export default function ContactForm() {
           }`}
           {...register("name", {
             required: "Name is required",
+            pattern: {
+              message: "Please enter a valid name",
+            },
             minLength: {
               value: 2,
               message: "Name must be at least 2 characters",
@@ -72,8 +75,8 @@ export default function ContactForm() {
           {...register("email", {
             required: "Email is required",
             pattern: {
-              value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-              message: "Please enter a valid email address",
+              value: /^[A-Za-z\s'-]+$/,
+              message: "Name can only contain letters and spaces",
             },
           })}
         />
