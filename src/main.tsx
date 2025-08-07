@@ -2,8 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import { AnimatePresence } from "framer-motion";
 
 import "./index.css";
+import LoadingPage from "./pages/LoadingPage";
+import PageWrapper from "./components/PageWrapper";
 
 const Layout = lazy(() => import("./pages/Layout"));
 const Home = lazy(() => import("./pages/Home"));
@@ -16,18 +19,32 @@ const router = createBrowserRouter([
     path: "/",
     element: <Layout />,
     children: [
-      { index: true, element: <Home /> },
-      { path: "projects", element: <ProjectsPage /> },
+      {
+        index: true,
+        element: (
+          <PageWrapper>
+            <Home />
+          </PageWrapper>
+        ),
+      },
+      {
+        path: "projects",
+        element: (
+          <PageWrapper>
+            <ProjectsPage />
+          </PageWrapper>
+        ),
+      },
       { path: "*", element: <NotFound /> },
     ],
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <Suspense
-      fallback={<div className="p-8 text-center">Loading...</div>}
-    ></Suspense>
-    <RouterProvider router={router} />
-    <Suspense />
+    <Suspense fallback={<LoadingPage />}>
+      <AnimatePresence>
+        <RouterProvider router={router} />
+      </AnimatePresence>
+    </Suspense>{" "}
   </React.StrictMode>
 );
