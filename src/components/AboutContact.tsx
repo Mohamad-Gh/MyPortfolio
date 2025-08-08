@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 
 export default function AboutContact() {
   return (
-    <section className="space-y-6 text-center max-w-2xl mx-auto">
+    <section className="py-6 text-center max-w-2xl mx-auto">
       <motion.h2
-        className="text-2xl font-semibold"
+        className="text-2xl py-2 font-semibold"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
@@ -17,7 +17,7 @@ export default function AboutContact() {
       </motion.h2>
 
       <motion.p
-        className="text-muted-foreground text-sm"
+        className="text-muted-foreground text-sm py-2"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.1 }}
