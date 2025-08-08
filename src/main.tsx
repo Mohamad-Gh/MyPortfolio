@@ -7,6 +7,7 @@ import { AnimatePresence } from "framer-motion";
 import "./index.css";
 import LoadingPage from "./pages/LoadingPage";
 import PageWrapper from "./components/PageWrapper";
+import { Toaster } from "sonner";
 
 const Layout = lazy(() => import("./pages/Layout"));
 const Home = lazy(() => import("./pages/Home"));
@@ -41,6 +42,7 @@ const router = createBrowserRouter([
 ]);
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
+    <Toaster richColors />
     <Suspense fallback={<LoadingPage />}>
       <AnimatePresence mode="wait">
         <RouterProvider router={router} />

@@ -1,7 +1,9 @@
-// src/components/Contact.tsx
 import { useForm } from "react-hook-form";
+import { send } from "@emailjs/browser";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { toast } from "sonner";
+
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -21,19 +23,41 @@ const contactSchema = z.object({
 
 type ContactFormData = z.infer<typeof contactSchema>;
 
+const SERVICE_ID = "service_bzklv08";
+const TEMPLATE_ID = "template_43xvq0m";
+const PUBLIC_KEY = "jE28kDvV4AGqgfN8t";
+
 export default function Contact() {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting, isSubmitSuccessful },
+    formState: { errors, isSubmitting },
     reset,
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = (data: ContactFormData) => {
-    console.log("Submitted:", data);
-    reset();
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      await send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          title: "Contact from Portfolio",
+          from_name: data.name,
+          user_email: data.email,
+          message: data.message,
+          time: new Date().toISOString(),
+        },
+        PUBLIC_KEY
+      );
+
+      toast.success("Message sent successfully!");
+      reset();
+    } catch (error) {
+      console.error("Email send failed:", error);
+      toast.error("Something went wrong. Please try again later.");
+    }
   };
 
   return (
@@ -69,10 +93,6 @@ export default function Contact() {
         <Button type="submit" disabled={isSubmitting}>
           {isSubmitting ? "Sending..." : "Send Message"}
         </Button>
-
-        {isSubmitSuccessful && (
-          <p className="text-green-600 text-sm">Message sent successfully!</p>
-        )}
       </form>
     </section>
   );
