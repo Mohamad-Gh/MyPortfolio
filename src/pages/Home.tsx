@@ -3,6 +3,7 @@ import Skills from "@/components/Skills";
 import ProjectsPreview from "@/components/ProjectPreview";
 import AboutContact from "@/components/AboutContact";
 import ContactForm from "@/components/ContactForm";
+import SkillsOrbit from "@/components/skills/SkillsOrbit";
 // import { useEffect, useState } from "react";
 
 export default function App() {
@@ -41,33 +42,41 @@ export default function App() {
         <div className="max-w-5xl mx-auto">
           {/* Hero Section */}
           <section className="text-center mt-20">
-            {
-              <motion.img
-                src={"https://picsum.photos/400"}
-                // src={imageUrl}
-                alt="Portrait of Mohamad Ghalebizade"
-                className="w-40 h-40 rounded-full mx-auto mb-6 object-cover"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6 }}
-              />
-            }
-            <motion.h1
-              className="text-4xl font-bold mb-2"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              Mohamad Ghalebizade
-            </motion.h1>
-            <motion.p
-              className="text-muted-foreground text-lg"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              Frontend Developer • React • Tailwind CSS • GraphQL
-            </motion.p>
+            <div className="flex">
+              <div className="w-1/2">
+                {
+                  <motion.img
+                    src={"https://picsum.photos/400"}
+                    // src={imageUrl}
+                    alt="Portrait of Mohamad Ghalebizade"
+                    className="w-40 h-40 rounded-full mx-auto mb-6 object-cover"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6 }}
+                  />
+                }
+                <motion.h1
+                  className="text-4xl font-bold mb-2"
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                  Mohamad Ghalebizade
+                </motion.h1>
+                <motion.p
+                  className="text-muted-foreground text-lg"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                >
+                  Frontend Developer • React • Tailwind CSS • GraphQL
+                </motion.p>
+              </div>
+
+              <div className="w-1/2">
+                <SkillsOrbit />
+              </div>
+            </div>
           </section>
           {/* about section */}
           <section className="mt-16 max-w-3xl mx-auto text-center text-muted-foreground">
