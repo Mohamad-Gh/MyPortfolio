@@ -1,129 +1,79 @@
-// src/components/ContactForm.tsx
-import { useForm, type SubmitHandler } from "react-hook-form";
+// src/components/Contact.tsx
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
 
-type FormData = {
-  name: string;
-  email: string;
-  message: string;
-};
+const contactSchema = z.object({
+  name: z
+    .string()
+    .min(2, { message: "Name must be at least 2 characters." })
+    .regex(/^[a-zA-Z\s]+$/, {
+      message: "Name can only contain letters and spaces.",
+    }),
+  email: z.string().email({ message: "Invalid email address." }),
+  message: z
+    .string()
+    .min(10, { message: "Message must be at least 10 characters." }),
+});
 
-export default function ContactForm() {
+type ContactFormData = z.infer<typeof contactSchema>;
+
+export default function Contact() {
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting, isSubmitSuccessful },
     reset,
-  } = useForm<FormData>({
-    mode: "onBlur", // validate on blur
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit: SubmitHandler<FormData> = async (data) => {
-    // Simulate async submission (e.g. API call)
-    await new Promise((r) => setTimeout(r, 1500));
-    alert(`Thank you for your message, ${data.name}!`);
+  const onSubmit = (data: ContactFormData) => {
+    console.log("Submitted:", data);
     reset();
   };
 
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      className="max-w-md mx-auto flex flex-col gap-6"
-      noValidate
-    >
-      {/* Name */}
-      <div>
-        <label htmlFor="name" className="block font-semibold mb-1">
-          Name
-        </label>
-        <input
-          id="name"
-          type="text"
-          className={`w-full rounded-md border px-3 py-2 focus:outline-none focus:ring-2 ${
-            errors.name
-              ? "border-red-500 focus:ring-red-500"
-              : "border-gray-300 focus:ring-primary"
-          }`}
-          {...register("name", {
-            required: "Name is required",
-            pattern: {
-              message: "Please enter a valid name",
-            },
-            minLength: {
-              value: 2,
-              message: "Name must be at least 2 characters",
-            },
-          })}
-        />
-        {errors.name && (
-          <p className="text-red-600 text-sm mt-1">{errors.name.message}</p>
+    <section id="contact" className="max-w-2xl mx-auto p-6 space-y-6">
+      <h2 className="text-2xl font-semibold text-center">Contact Me</h2>
+
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+        <div>
+          <Input placeholder="Your Name" {...register("name")} />
+          {errors.name && (
+            <p className="text-red-500 text-sm">{errors.name.message}</p>
+          )}
+        </div>
+
+        <div>
+          <Input type="email" placeholder="Your Email" {...register("email")} />
+          {errors.email && (
+            <p className="text-red-500 text-sm">{errors.email.message}</p>
+          )}
+        </div>
+
+        <div>
+          <Textarea
+            rows={5}
+            placeholder="Your Message"
+            {...register("message")}
+          />
+          {errors.message && (
+            <p className="text-red-500 text-sm">{errors.message.message}</p>
+          )}
+        </div>
+
+        <Button type="submit" disabled={isSubmitting}>
+          {isSubmitting ? "Sending..." : "Send Message"}
+        </Button>
+
+        {isSubmitSuccessful && (
+          <p className="text-green-600 text-sm">Message sent successfully!</p>
         )}
-      </div>
-
-      {/* Email */}
-      <div>
-        <label htmlFor="email" className="block font-semibold mb-1">
-          Email
-        </label>
-        <input
-          id="email"
-          type="email"
-          className={`w-full rounded-md border px-3 py-2 focus:outline-none focus:ring-2 ${
-            errors.email
-              ? "border-red-500 focus:ring-red-500"
-              : "border-gray-300 focus:ring-primary"
-          }`}
-          {...register("email", {
-            required: "Email is required",
-            pattern: {
-              value: /^[A-Za-z\s'-]+$/,
-              message: "Name can only contain letters and spaces",
-            },
-          })}
-        />
-        {errors.email && (
-          <p className="text-red-600 text-sm mt-1">{errors.email.message}</p>
-        )}
-      </div>
-
-      {/* Message */}
-      <div>
-        <label htmlFor="message" className="block font-semibold mb-1">
-          Message
-        </label>
-        <textarea
-          id="message"
-          rows={5}
-          className={`w-full rounded-md border px-3 py-2 resize-y focus:outline-none focus:ring-2 ${
-            errors.message
-              ? "border-red-500 focus:ring-red-500"
-              : "border-gray-300 focus:ring-primary"
-          }`}
-          {...register("message", {
-            required: "Message is required",
-            minLength: {
-              value: 10,
-              message: "Message must be at least 10 characters",
-            },
-          })}
-        />
-        {errors.message && (
-          <p className="text-red-600 text-sm mt-1">{errors.message.message}</p>
-        )}
-      </div>
-
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        className="bg-primary text-primary-foreground py-2 rounded-md font-semibold hover:bg-primary/90 transition disabled:opacity-50"
-      >
-        {isSubmitting ? "Sending..." : "Send Message"}
-      </button>
-
-      {isSubmitSuccessful && (
-        <p className="text-green-600 mt-2 text-center font-medium">
-          Message sent successfully!
-        </p>
-      )}
-    </form>
+      </form>
+    </section>
   );
 }

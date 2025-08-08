@@ -5,7 +5,13 @@ import { motion } from "framer-motion";
 
 export default function AboutContact() {
   return (
-    <section className="py-6 text-center max-w-2xl mx-auto">
+    <motion.section
+      className="max-w-3xl mx-auto px-4 py-20 text-center"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.6 }}
+    >
       <motion.h2
         className="text-2xl py-2 font-semibold"
         initial={{ opacity: 0, y: 20 }}
@@ -62,6 +68,6 @@ export default function AboutContact() {
           </Button>
         </a>
       </motion.div>
-    </section>
+    </motion.section>
   );
 }
