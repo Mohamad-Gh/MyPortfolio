@@ -7,7 +7,7 @@ export function ScrollToTopButton() {
 
   useEffect(() => {
     const onScroll = () => {
-      setShow(window.scrollY > 300);
+      setShow(window.scrollY > 500);
     };
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
@@ -27,7 +27,7 @@ export function ScrollToTopButton() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 40 }}
           transition={{ duration: 0.3 }}
-          className="fixed bottom-6 right-6 z-50 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-primary/90 transition-colors"
+          className="fixed bottom-18 right-6 z-50 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-primary/90 transition-colors"
           aria-label="Scroll to top"
         >
           <ArrowUp className="w-5 h-5" />
