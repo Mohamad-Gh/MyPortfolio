@@ -143,8 +143,8 @@ export default function Contact() {
           >
             <a href="mailto:ghalebizadem@gmail.com" target="_blank">
               <Button variant="outline">
-                <Mail className="w-4 h-4 mr-2" />
-                Email Me
+                <Mail className="w-4 h-4 lg:mr-2 sm:mr-0" />
+                <span className="sm:hidden lg:flex">Email Me</span>
               </Button>
             </a>
             <a
@@ -153,8 +153,8 @@ export default function Contact() {
               rel="noopener noreferrer"
             >
               <Button variant="outline">
-                <FaGithub className="w-4 h-4 mr-2" />
-                GitHub
+                <FaGithub className="w-4 h-4 lg:mr-2 sm:mr-0" />
+                <span className="sm:hidden lg:flex">GitHub</span>
               </Button>
             </a>
             <a
@@ -163,8 +163,8 @@ export default function Contact() {
               rel="noopener noreferrer"
             >
               <Button variant="outline">
-                <FaLinkedin className="w-4 h-4 mr-2" />
-                LinkedIn
+                <FaLinkedin className="w-4 h-4 lg:mr-2 sm:mr-0" />
+                <span className="sm:hidden lg:flex">LinkedIn</span>
               </Button>
             </a>
           </motion.div>
