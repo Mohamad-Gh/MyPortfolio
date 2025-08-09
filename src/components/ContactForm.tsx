@@ -3,10 +3,14 @@ import { send } from "@emailjs/browser";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
+import { motion } from "framer-motion";
 
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { ArrowUpRight, Mail, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const contactSchema = z.object({
   name: z
@@ -26,6 +30,10 @@ type ContactFormData = z.infer<typeof contactSchema>;
 const SERVICE_ID = "service_bzklv08";
 const TEMPLATE_ID = "template_43xvq0m";
 const PUBLIC_KEY = "jE28kDvV4AGqgfN8t";
+
+const handleGetInTouch = () => {
+  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+};
 
 export default function Contact() {
   const {
@@ -61,39 +69,123 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="max-w-2xl mx-auto p-6 space-y-6">
+    <section id="contact" className="py-6 space-y-6">
       <h2 className="text-2xl font-semibold text-center">Contact Me</h2>
+      <div className="flex gap-6 sm:flex-col sm:items-center lg:flex-row lg:items-stretch">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="space-y-4 w-1/2 flex flex-col justify-between "
+        >
+          <div>
+            <Input placeholder="Your Name" {...register("name")} />
+            {errors.name && (
+              <p className="text-red-500 text-sm">{errors.name.message}</p>
+            )}
+          </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-        <div>
-          <Input placeholder="Your Name" {...register("name")} />
-          {errors.name && (
-            <p className="text-red-500 text-sm">{errors.name.message}</p>
-          )}
+          <div>
+            <Input
+              type="email"
+              placeholder="Your Email"
+              {...register("email")}
+            />
+            {errors.email && (
+              <p className="text-red-500 text-sm">{errors.email.message}</p>
+            )}
+          </div>
+
+          <div className="flex-1">
+            <Textarea
+              rows={10}
+              placeholder="Your Message"
+              {...register("message")}
+              className="h-full"
+            />
+            {errors.message && (
+              <p className="text-red-500 text-sm">{errors.message.message}</p>
+            )}
+          </div>
+
+          <Button type="submit" disabled={isSubmitting}>
+            {isSubmitting ? "Sending..." : "Send Message"}
+          </Button>
+        </form>
+        {/* Lets build something */}
+        <div className="w-1/2 flex flex-col justify-between">
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <Sparkles className="w-5 h-5 text-primary" />
+              <h2 className="text-2xl font-bold">
+                Let's Build Something Amazing
+              </h2>
+            </div>
+
+            <div className="space-y-4 mb-8 text-muted-foreground flex-1">
+              <p>
+                With extensive experience in building production-ready
+                applications, I am well-equipped to bring your next project to
+                life with precision and care.
+              </p>
+              <p>
+                From concept to deployment, I ensure every detail is crafted
+                with excellence. Let's work together to create something truly
+                exceptional.
+              </p>
+            </div>
+          </div>
+          {/* Links */}
+          <motion.div
+            className="flex justify-center gap-4 flex-wrap"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <a href="mailto:ghalebizadem@gmail.com" target="_blank">
+              <Button variant="outline">
+                <Mail className="w-4 h-4 mr-2" />
+                Email Me
+              </Button>
+            </a>
+            <a
+              href="https://github.com/MohamadGH"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline">
+                <FaGithub className="w-4 h-4 mr-2" />
+                GitHub
+              </Button>
+            </a>
+            <a
+              href="https://linkedin.com/in/mohamad-ghalebizade"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline">
+                <FaLinkedin className="w-4 h-4 mr-2" />
+                LinkedIn
+              </Button>
+            </a>
+          </motion.div>
+          {/* Buttons */}
+          <div className="pt-8 flex flex-col sm:flex-row sm:justify-center gap-4">
+            <button
+              onClick={handleGetInTouch}
+              className="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
+            >
+              Get In Touch
+              <ArrowUpRight className="w-4 h-4" />
+            </button>
+            <Link to={"/projects"}>
+              <button className="flex items-center justify-center gap-2 px-6 py-3 bg-muted text-foreground rounded-lg font-medium hover:bg-muted/80 transition-colors">
+                View Projects
+                <ArrowUpRight className="w-4 h-4" />
+              </button>
+            </Link>
+          </div>
         </div>
-
-        <div>
-          <Input type="email" placeholder="Your Email" {...register("email")} />
-          {errors.email && (
-            <p className="text-red-500 text-sm">{errors.email.message}</p>
-          )}
-        </div>
-
-        <div>
-          <Textarea
-            rows={5}
-            placeholder="Your Message"
-            {...register("message")}
-          />
-          {errors.message && (
-            <p className="text-red-500 text-sm">{errors.message.message}</p>
-          )}
-        </div>
-
-        <Button type="submit" disabled={isSubmitting}>
-          {isSubmitting ? "Sending..." : "Send Message"}
-        </Button>
-      </form>
+      </div>
     </section>
   );
 }

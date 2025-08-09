@@ -4,12 +4,14 @@ import { ScrollToTopButton } from "@/components/ScrollToTopButton";
 import { Outlet } from "react-router-dom";
 function Layout() {
   return (
-    <>
+    <div className="max-w-6xl mx-auto">
       <Header />
       <ScrollToTopButton />
-      <Outlet />
+      <main className="min-h-screen bg-background text-foreground p-6">
+        <Outlet />
+      </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

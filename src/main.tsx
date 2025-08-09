@@ -47,6 +47,6 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <AnimatePresence mode="wait">
         <RouterProvider router={router} />
       </AnimatePresence>
-    </Suspense>{" "}
+    </Suspense>
   </React.StrictMode>
 );
