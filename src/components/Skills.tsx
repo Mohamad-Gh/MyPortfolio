@@ -68,7 +68,7 @@ export default function TechnicalExpertise() {
             }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ amount: 0.4 }}
             className="space-y-8"
           >
             <div>
@@ -142,7 +142,7 @@ export default function TechnicalExpertise() {
             }}
             whileInView={{ x: 0, y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ amount: 0.4 }}
             className="space-y-8"
           >
             <div>
