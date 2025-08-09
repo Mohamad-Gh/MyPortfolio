@@ -60,7 +60,7 @@ export default function TechnicalExpertise() {
   };
 
   return (
-    <section className="py-16 px-6 max-w-6xl mx-auto">
+    <section className="py-16 max-w-6xl mx-auto">
       <div className="bg-card text-card-foreground border border-border rounded-2xl p-8 shadow-lg">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left Side */}

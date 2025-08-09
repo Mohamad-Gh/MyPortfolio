@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import Skills from "@/components/Skills";
 import ProjectsPreview from "@/components/ProjectPreview";
 import AboutContact from "@/components/AboutContact";
 import ContactForm from "@/components/ContactForm";
 import SkillsOrbit from "@/components/skills/SkillsOrbit";
+import TechnicalExpertise from "@/components/TechnicalExpertise";
 
 export default function App() {
   return (
@@ -60,7 +60,7 @@ export default function App() {
 
           {/* Tech Stack Section */}
 
-          <Skills />
+          <TechnicalExpertise />
           {/* Projects Preview */}
           <ProjectsPreview />
           {/* About and Contacts */}
