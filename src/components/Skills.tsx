@@ -1,6 +1,6 @@
 // src/components/TechnicalExpertise.tsx
 import { Link } from "react-router-dom";
-import { Sparkles, Code, ArrowUpRight } from "lucide-react";
+import { Sparkles, Code, ArrowUpRight, Mail } from "lucide-react";
 import {
   FaReact,
   FaCss3Alt,
@@ -8,6 +8,8 @@ import {
   FaGitAlt,
   FaNpm,
   FaNodeJs,
+  FaLinkedin,
+  FaGithub,
 } from "react-icons/fa";
 import {
   SiTypescript,
@@ -23,6 +25,7 @@ import {
 } from "react-icons/si";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
+import { Button } from "./ui/button";
 
 const FRONTENDSKILLS = [
   { name: "React", icon: <FaReact className="text-cyan-500" /> },
@@ -69,66 +72,64 @@ export default function TechnicalExpertise() {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ amount: 0.4 }}
-            className="space-y-8"
+            className="flex flex-col"
           >
+            <div className="flex items-center gap-3 mb-6">
+              <Code className="w-5 h-5 text-primary" />
+              <h3 className="text-xl font-semibold">Technical Expertise</h3>
+            </div>
+
+            {/* FRONTEND */}
+            <div className="mb-6">
+              <h4 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
+                Frontend
+              </h4>
+              <div className="flex flex-wrap gap-3">
+                {FRONTENDSKILLS.map((skill) => (
+                  <div
+                    key={skill.name}
+                    className="flex items-center justify-center w-12 h-12 bg-muted rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
+                    title={skill.name}
+                  >
+                    {skill.icon}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* BACKEND */}
+            <div className="mb-6">
+              <h4 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
+                Backend
+              </h4>
+              <div className="flex flex-wrap gap-3">
+                {BACKENDSKILLS.map((skill) => (
+                  <div
+                    key={skill.name}
+                    className="flex items-center justify-center w-12 h-12 bg-muted rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
+                    title={skill.name}
+                  >
+                    {skill.icon}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* DEVOPS */}
             <div>
-              <div className="flex items-center gap-3 mb-6">
-                <Code className="w-5 h-5 text-primary" />
-                <h3 className="text-xl font-semibold">Technical Expertise</h3>
-              </div>
-
-              {/* FRONTEND */}
-              <div className="mb-6">
-                <h4 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
-                  Frontend
-                </h4>
-                <div className="flex flex-wrap gap-3">
-                  {FRONTENDSKILLS.map((skill) => (
-                    <div
-                      key={skill.name}
-                      className="flex items-center justify-center w-12 h-12 bg-muted rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
-                      title={skill.name}
-                    >
-                      {skill.icon}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* BACKEND */}
-              <div className="mb-6">
-                <h4 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
-                  Backend
-                </h4>
-                <div className="flex flex-wrap gap-3">
-                  {BACKENDSKILLS.map((skill) => (
-                    <div
-                      key={skill.name}
-                      className="flex items-center justify-center w-12 h-12 bg-muted rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
-                      title={skill.name}
-                    >
-                      {skill.icon}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* DEVOPS */}
-              <div>
-                <h4 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
-                  DevOps
-                </h4>
-                <div className="flex flex-wrap gap-3">
-                  {DEVOPSSKILLS.map((skill) => (
-                    <div
-                      key={skill.name}
-                      className="flex items-center justify-center w-12 h-12 bg-muted rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
-                      title={skill.name}
-                    >
-                      {skill.icon}
-                    </div>
-                  ))}
-                </div>
+              <h4 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
+                DevOps
+              </h4>
+              <div className="flex flex-wrap gap-3">
+                {DEVOPSSKILLS.map((skill) => (
+                  <div
+                    key={skill.name}
+                    className="flex items-center justify-center w-12 h-12 bg-muted rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
+                    title={skill.name}
+                  >
+                    {skill.icon}
+                  </div>
+                ))}
               </div>
             </div>
           </motion.div>
@@ -143,7 +144,8 @@ export default function TechnicalExpertise() {
             whileInView={{ x: 0, y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ amount: 0.4 }}
-            className="space-y-8"
+            // className="space-y-8"
+            className="flex flex-col justify-start gap-4"
           >
             <div>
               <div className="flex items-center gap-3 mb-4">
@@ -165,23 +167,57 @@ export default function TechnicalExpertise() {
                   exceptional.
                 </p>
               </div>
-
-              {/* Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button
-                  onClick={handleGetInTouch}
-                  className="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
-                >
-                  Get In Touch
+            </div>
+            {/* Links */}
+            <motion.div
+              className="flex justify-center gap-4 flex-wrap"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <a href="mailto:ghalebizadem@gmail.com" target="_blank">
+                <Button variant="outline">
+                  <Mail className="w-4 h-4 mr-2" />
+                  Email Me
+                </Button>
+              </a>
+              <a
+                href="https://github.com/MohamadGH"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline">
+                  <FaGithub className="w-4 h-4 mr-2" />
+                  GitHub
+                </Button>
+              </a>
+              <a
+                href="https://linkedin.com/in/mohamad-ghalebizade"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline">
+                  <FaLinkedin className="w-4 h-4 mr-2" />
+                  LinkedIn
+                </Button>
+              </a>
+            </motion.div>
+            {/* Buttons */}
+            <div className="pt-8 flex flex-col sm:flex-row sm:justify-center gap-4">
+              <button
+                onClick={handleGetInTouch}
+                className="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
+              >
+                Get In Touch
+                <ArrowUpRight className="w-4 h-4" />
+              </button>
+              <Link to={"/projects"}>
+                <button className="flex items-center justify-center gap-2 px-6 py-3 bg-muted text-foreground rounded-lg font-medium hover:bg-muted/80 transition-colors">
+                  View Projects
                   <ArrowUpRight className="w-4 h-4" />
                 </button>
-                <Link to={"/projects"}>
-                  <button className="flex items-center justify-center gap-2 px-6 py-3 bg-muted text-foreground rounded-lg font-medium hover:bg-muted/80 transition-colors">
-                    View Projects
-                    <ArrowUpRight className="w-4 h-4" />
-                  </button>
-                </Link>
-              </div>
+              </Link>
             </div>
           </motion.div>
         </div>
