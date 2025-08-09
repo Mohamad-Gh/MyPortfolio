@@ -64,9 +64,9 @@ export default function Header() {
   }, [isDark, sunControls, moonControls]);
 
   return (
-    <header className="relative z-10 flex justify-between items-center px-6 py-4 border-b border-border bg-background">
+    <header className="relative z-10 flex justify-between items-center px-6 border-b border-border bg-background">
       <div className="flex items-center space-x-8">
-        <h1 className="text-xl font-bold">Portfolio</h1>
+        <h1 className="text-xl font-bold">My Logo</h1>
         <nav className="flex gap-4 text-sm font-medium">
           <Link to="/" className="hover:underline hover:text-primary">
             Home
@@ -77,11 +77,11 @@ export default function Header() {
         </nav>
       </div>
 
-      <div className="relative w-20 h-24">
+      <div className="relative w-20 h-20">
         <svg
           className="absolute"
-          width="40"
-          height="80"
+          width="30"
+          height="10"
           style={{
             left: "50%",
             top: "50%",
@@ -108,7 +108,7 @@ export default function Header() {
           {/* Moon Icon – visible in light mode */}
           <motion.g
             animate={moonControls}
-            style={{ originX: "20px", originY: "40px" }}
+            style={{ originX: "10px", originY: "40px" }}
           >
             <foreignObject x="-12" y="-12" width="24" height="24">
               <button disabled={isDark} onClick={animate}>

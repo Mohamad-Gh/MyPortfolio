@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import ProjectsPreview from "@/components/ProjectPreview";
-import AboutContact from "@/components/AboutContact";
 import ContactForm from "@/components/ContactForm";
 import SkillsOrbit from "@/components/skills/SkillsOrbit";
 import TechnicalExpertise from "@/components/TechnicalExpertise";
@@ -64,7 +63,7 @@ export default function App() {
           {/* Projects Preview */}
           <ProjectsPreview />
           {/* About and Contacts */}
-          <AboutContact />
+          {/* <AboutContact /> */}
         </div>
         <ContactForm />
       </main>
