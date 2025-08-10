@@ -9,8 +9,8 @@ export default function App() {
     <>
       {/* Hero Section */}
       <section className="text-center mt-20">
-        <div className="flex">
-          <div className="w-1/2">
+        <div className="flex justify-between">
+          <div className="w-full lg:w-1/2 ">
             {
               <motion.img
                 src={"https://picsum.photos/400"}
@@ -46,9 +46,9 @@ export default function App() {
               user-centric design.
             </p>
           </div>
-          <div className="w-1/2">
-            <SkillsOrbit />
-          </div>
+          {/* <div className="hidden lg:flex lg:w-1/2"> */}
+          <SkillsOrbit />
+          {/* </div> */}
         </div>
       </section>
       {/* Tech Stack Section */}
