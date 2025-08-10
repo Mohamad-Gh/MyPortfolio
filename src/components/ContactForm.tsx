@@ -69,13 +69,12 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-8 space-y-8">
-      <h2 className="text-3xl font-semibold text-center">Contact Me</h2>
-      <div className="flex flex-col lg:flex-row gap-8">
-        {/* Form */}
+    <section id="contact" className="py-6 space-y-6">
+      <h2 className="text-2xl font-semibold text-center">Contact Me</h2>
+      <div className="flex gap-6 sm:flex-col sm:items-center lg:flex-row lg:items-stretch">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="space-y-4 w-full lg:w-1/2"
+          className="space-y-4 w-1/2 flex flex-col justify-between "
         >
           <div>
             <Input placeholder="Your Name" {...register("name")} />
@@ -95,24 +94,24 @@ export default function Contact() {
             )}
           </div>
 
-          <div>
+          <div className="flex-1">
             <Textarea
-              rows={8}
+              rows={10}
               placeholder="Your Message"
               {...register("message")}
+              className="h-full"
             />
             {errors.message && (
               <p className="text-red-500 text-sm">{errors.message.message}</p>
             )}
           </div>
 
-          <Button type="submit" disabled={isSubmitting} className="w-full">
+          <Button type="submit" disabled={isSubmitting}>
             {isSubmitting ? "Sending..." : "Send Message"}
           </Button>
         </form>
-
-        {/* Info Section */}
-        <div className="w-full lg:w-1/2 flex flex-col justify-between">
+        {/* Lets build something */}
+        <div className="w-1/2 flex flex-col justify-between">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <Sparkles className="w-5 h-5 text-primary" />
@@ -121,31 +120,31 @@ export default function Contact() {
               </h2>
             </div>
 
-            <div className="space-y-4 mb-8 text-muted-foreground">
+            <div className="space-y-4 mb-8 text-muted-foreground flex-1">
               <p>
                 With extensive experience in building production-ready
-                applications, I can bring your next project to life with
-                precision and care.
+                applications, I am well-equipped to bring your next project to
+                life with precision and care.
               </p>
               <p>
                 From concept to deployment, I ensure every detail is crafted
-                with excellence.
+                with excellence. Let's work together to create something truly
+                exceptional.
               </p>
             </div>
           </div>
-
           {/* Links */}
           <motion.div
-            className="flex justify-center lg:justify-start gap-4 flex-wrap"
+            className="flex justify-center gap-4 flex-wrap"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
             <a href="mailto:ghalebizadem@gmail.com" target="_blank">
-              <Button variant="outline" className="flex items-center gap-2">
-                <Mail className="w-4 h-4" />
-                <span>Email Me</span>
+              <Button variant="outline">
+                <Mail className="w-4 h-4 lg:mr-2 sm:mr-0" />
+                <span className="sm:hidden lg:flex">Email Me</span>
               </Button>
             </a>
             <a
@@ -153,9 +152,9 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="outline" className="flex items-center gap-2">
-                <FaGithub className="w-4 h-4" />
-                <span>GitHub</span>
+              <Button variant="outline">
+                <FaGithub className="w-4 h-4 lg:mr-2 sm:mr-0" />
+                <span className="sm:hidden lg:flex">GitHub</span>
               </Button>
             </a>
             <a
@@ -163,24 +162,23 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="outline" className="flex items-center gap-2">
-                <FaLinkedin className="w-4 h-4" />
-                <span>LinkedIn</span>
+              <Button variant="outline">
+                <FaLinkedin className="w-4 h-4 lg:mr-2 sm:mr-0" />
+                <span className="sm:hidden lg:flex">LinkedIn</span>
               </Button>
             </a>
           </motion.div>
-
-          {/* Action Buttons */}
-          <div className="pt-8 flex flex-col sm:flex-row gap-4">
+          {/* Buttons */}
+          <div className="pt-8 flex flex-col sm:flex-row sm:justify-center gap-4">
             <button
               onClick={handleGetInTouch}
-              className="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors w-full sm:w-auto"
+              className="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
               Get In Touch
               <ArrowUpRight className="w-4 h-4" />
             </button>
-            <Link to={"/projects"} className="w-full sm:w-auto">
-              <button className="flex items-center justify-center gap-2 px-6 py-3 bg-muted text-foreground rounded-lg font-medium hover:bg-muted/80 transition-colors w-full">
+            <Link to={"/projects"}>
+              <button className="flex items-center justify-center gap-2 px-6 py-3 bg-muted text-foreground rounded-lg font-medium hover:bg-muted/80 transition-colors">
                 View Projects
                 <ArrowUpRight className="w-4 h-4" />
               </button>

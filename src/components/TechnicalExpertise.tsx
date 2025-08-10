@@ -53,7 +53,7 @@ export default function TechnicalExpertise() {
 
   return (
     <section className="py-16 mx-auto">
-      <div className="bg-card text-card-foreground border border-border rounded-2xl p-8 shadow-lg">
+      <div className="bg-card text-card-foreground border border-border rounded-2xl p-8 shadow-lg ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left Side */}
           <motion.div
@@ -136,9 +136,33 @@ export default function TechnicalExpertise() {
             whileInView={{ x: 0, y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ amount: 0.4 }}
-            // className="space-y-8"
-            className="flex flex-col justify-start gap-4"
-          ></motion.div>
+            className="flex flex-col justify-start gap-8"
+          >
+            <div>
+              <h4 className="text-lg font-semibold mb-2">Frontend</h4>
+              <p className="text-sm text-muted-foreground">
+                I specialize in crafting responsive and interactive user
+                interfaces using modern frameworks and libraries, ensuring
+                accessibility and performance.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="text-lg font-semibold mb-2">Backend</h4>
+              <p className="text-sm text-muted-foreground">
+                Experienced in building robust backend services and REST/GraphQL
+                APIs that integrate seamlessly with frontend applications.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="text-lg font-semibold mb-2">DevOps</h4>
+              <p className="text-sm text-muted-foreground">
+                Skilled in version control, continuous integration, and
+                deployment processes to streamline development and delivery.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
