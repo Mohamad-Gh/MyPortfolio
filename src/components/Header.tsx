@@ -2,6 +2,8 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Sun, Moon } from "lucide-react";
 import { Link } from "react-router-dom";
+import DarkLogo from "/DarkLogo.png";
+import LightLogo from "/LightLogo.png";
 
 export default function Header() {
   const [isDark, setIsDark] = useState(false);
@@ -66,7 +68,12 @@ export default function Header() {
   return (
     <header className="relative z-10 flex justify-between items-center px-6 border-b border-border bg-background">
       <div className="flex items-center space-x-8">
-        <h1 className="text-xl font-bold">My Logo</h1>
+        <img
+          className="object-cover"
+          height={70}
+          width={70}
+          src={isDark ? DarkLogo : LightLogo}
+        />
         <nav className="flex gap-4 text-sm font-medium">
           <Link to="/" className="hover:underline hover:text-primary">
             Home
