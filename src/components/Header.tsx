@@ -2,8 +2,8 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Sun, Moon } from "lucide-react";
 import { Link } from "react-router-dom";
-import DarkLogo from "/NeonLogo.png";
-import LightLogo from "/Logo.png";
+import DarkLogo from "@/assets/images/Logos/NeonLogo.png";
+import LightLogo from "@/assets/images/Logos/NeonLogo.png";
 
 export default function Header() {
   const [isDark, setIsDark] = useState(false);
