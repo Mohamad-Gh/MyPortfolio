@@ -132,7 +132,9 @@ const SkillsOrbit = () => {
                 }}
               >
                 <motion.div
-                  className="absolute flex items-center justify-center rounded-full bg-secondary p-1 shadow-xl"
+                  className={`absolute flex items-center justify-center rounded-full bg-secondary p-1 shadow-xl ${
+                    (color === "#000000" || color === "#181717") && "bg-white"
+                  }`}
                   style={{
                     zIndex: orbitSkills.length - index,
                     left: -iconSize / 2,
