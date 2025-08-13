@@ -76,7 +76,6 @@ export default function ProjectsPreview() {
                   </p>
 
                   <ul className="flex gap-2 mb-4 text-xl flex-wrap">
-                    {/* 🔹 Added flex-wrap so tech icons wrap on small screens */}
                     {project.technologiesWithIcons.map((tech) => (
                       <li key={tech.name} className="tech-item hover:text-xs">
                         {tech.icon ? (
