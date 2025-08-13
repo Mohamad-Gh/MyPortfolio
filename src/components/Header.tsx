@@ -60,21 +60,23 @@ export default function Header() {
     <header className="relative z-10 flex justify-between items-center px-6 border-b border-border bg-background">
       <div className="flex items-center space-x-8">
         {/* Pulsing Logo */}
-        <motion.img
-          className="object-cover"
-          height={70}
-          width={70}
-          src={isDark ? DarkLogo : LightLogo}
-          animate={{
-            scale: [1, 1.05, 1],
-            filter: ["brightness(1)", "brightness(1.15)", "brightness(1)"],
-          }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
+        <Link to="/">
+          <motion.img
+            className="object-cover"
+            height={70}
+            width={70}
+            src={isDark ? DarkLogo : LightLogo}
+            animate={{
+              scale: [1, 1.05, 1],
+              filter: ["brightness(1)", "brightness(1.15)", "brightness(1)"],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        </Link>
         <nav className="flex gap-4 text-sm font-medium">
           <Link to="/" className="hover:underline hover:text-primary">
             Home
