@@ -31,7 +31,7 @@ export default function App() {
               Mohamad Ghalebizade
             </motion.h1>
             <motion.p
-              className="text-muted-foreground text-lg"
+              className="text-muted-foreground text-lg tracking-tight"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
@@ -40,7 +40,7 @@ export default function App() {
               Node.js • MongoDB • Firebase • Material UI
             </motion.p>
             {/* about  */}
-            <p className="mt-10 text-center text-muted-foreground line-clamp-3">
+            <p className="mt-10 text-center tracking-tight text-muted-foreground">
               Frontend-focused fullstack developer experienced in building
               high-performance web apps — from e-commerce stores and rental
               platforms to team management tools — using React, Next.js,
