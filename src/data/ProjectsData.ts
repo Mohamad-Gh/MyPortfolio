@@ -220,6 +220,7 @@ const projects: ProjectType[] = [
       { name: "React Slick", icon: BiLogoReact },
       { name: "Slick Carousel", icon: BiLogoReact },
       { name: "Vite", icon: SiVite },
+      { name: "Vercel", icon: SiVercel },
     ],
     thumbnail: FoodHut_FrontPage,
     gallery: [FoodHut_FrontPage, FoodHut_MenuPage, FoodHut_OrderPage],

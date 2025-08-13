@@ -12,6 +12,7 @@ import {
   SiFirebase,
   SiStripe,
   SiExpress,
+  SiVercel,
 } from "react-icons/si";
 
 import { useResponsiveRadius } from "@/hooks/useResponsiveRadius";
@@ -29,6 +30,7 @@ const outerCircleSkills = [
   { Icon: SiMui, color: "#007FFF" },
   { Icon: SiFramer, color: "#0055FF" },
   { Icon: FaJs, color: "#F7DF1E" },
+  { Icon: SiVercel, color: "#000000" },
 ];
 
 // ---------------- BACKEND + DEVOPS (inner) ----------------
