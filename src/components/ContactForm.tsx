@@ -138,7 +138,7 @@ export default function Contact() {
             className="flex justify-center gap-4 flex-wrap"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 1 }}
             viewport={{ once: true }}
           >
             <a href="mailto:ghalebizadem@gmail.com" target="_blank">
