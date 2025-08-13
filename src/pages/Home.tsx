@@ -36,7 +36,7 @@ export default function App() {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               React • Next.js • TypeScript • Tailwind CSS • Redux • GraphQL •
-              Node.js • MongoDB • Firebase • Material UI
+              Node.js • MongoDB • Firebase • Vercel • Material UI
             </motion.p>
             {/* about  */}
           </div>
