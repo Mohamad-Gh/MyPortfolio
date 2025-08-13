@@ -187,7 +187,7 @@ export default function ProjectCard({
   return (
     <div className="border rounded-xl p-6 space-y-4 bg-card shadow-md hover:shadow-lg transition-shadow">
       <h2 className="text-xl font-semibold">{title}</h2>
-      <p className="text-muted-foreground">{description}</p>
+      <p className=" h-24 text-muted-foreground line-clamp-4">{description}</p>
 
       {/* Carousel */}
       {gallery && gallery.length > 0 && (
