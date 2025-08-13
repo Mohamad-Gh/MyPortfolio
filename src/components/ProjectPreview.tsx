@@ -12,20 +12,45 @@ export default function ProjectsPreview() {
   const settings = {
     dots: false,
     arrows: false,
-    infinite: true, // better loop in center mode
+    infinite: true,
     speed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    centerMode: true, // enable center mode
-    centerPadding: "50px", // space on left/right of center slide
+    centerMode: true,
+    centerPadding: "50px",
     autoplay: true,
     autoplaySpeed: 500,
     pauseOnHover: true,
+
+    // 🔹 Added responsive breakpoints
+    responsive: [
+      {
+        breakpoint: 1024, // large screens
+        settings: {
+          slidesToShow: 2,
+          centerPadding: "30px",
+        },
+      },
+      {
+        breakpoint: 768, // tablets
+        settings: {
+          slidesToShow: 1,
+          centerPadding: "20px",
+        },
+      },
+      {
+        breakpoint: 480, // mobile phones
+        settings: {
+          slidesToShow: 1,
+          centerPadding: "10px",
+        },
+      },
+    ],
   };
 
   return (
     <section className="space-y-8">
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center flex-wrap gap-2">
         <h2 className="text-2xl font-semibold">Featured Projects</h2>
         <Link to="/projects" className="text-primary hover:underline text-sm">
           View All Projects →
@@ -34,12 +59,12 @@ export default function ProjectsPreview() {
       <Slider {...settings}>
         {projectsFeatures.map((project) => (
           <div key={project.id} className="px-2">
-            <Card className="w-96 hover:shadow-md transition-shadow mx-auto p-0">
+            <Card className="max-w-sm w-full sm:w-96 hover:shadow-md transition-shadow mx-auto p-0">
               <div className="block">
                 <img
                   src={project.thumbnail}
                   alt={project.title}
-                  className="w-full h-52 object-fill rounded-t-sm"
+                  className="w-full h-52 object-contain rounded-t-sm"
                 />
                 <CardContent className="flex flex-col justify-between p-4">
                   <CardHeader className="p-0 mb-2">
@@ -50,13 +75,14 @@ export default function ProjectsPreview() {
                     {project.description}
                   </p>
 
-                  <ul className="flex gap-2 mb-4 text-xl">
+                  <ul className="flex gap-2 mb-4 text-xl flex-wrap">
+                    {/* 🔹 Added flex-wrap so tech icons wrap on small screens */}
                     {project.technologiesWithIcons.map((tech) => (
                       <li key={tech.name} className="tech-item hover:text-xs">
                         {tech.icon ? (
                           <tech.icon size={16} title={tech.name} />
                         ) : (
-                          <span className="text-xs">{tech.name}</span> // Fallback if no icon is provided
+                          <span className="text-xs">{tech.name}</span>
                         )}
                       </li>
                     ))}
