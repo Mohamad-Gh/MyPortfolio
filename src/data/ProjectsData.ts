@@ -30,6 +30,9 @@ import TeamManager_CreatePage from "@/assets/images/projects/Team_Management_App
 import TeamManager_ProfilePage from "@/assets/images/projects/Team_Management_App/Teams_App_Profile_Page.jpg";
 import TeamManager_ProjectDetailsPage from "@/assets/images/projects/Team_Management_App/Teams_App_ProjectDetails_Page.jpg";
 
+//Easy Drive
+import EasyDrive_Front_Page from "@/assets/images/projects/EasyDrive/EasyDrive-Front_Page.jpg";
+
 // ICONS
 import { FaReact, FaNodeJs, FaGithub, FaGoogle } from "react-icons/fa";
 import {
@@ -78,7 +81,7 @@ const projects: ProjectType[] = [
   {
     id: "1",
     title: "Car Rental with Backend",
-    description: "",
+    description: "working in progress ...",
     technologiesWithIcons: [
       { name: "Tailwind CSS", icon: SiTailwindcss },
       { name: "Vite", icon: SiVite },
@@ -102,8 +105,8 @@ const projects: ProjectType[] = [
       { name: "React Router", icon: BiLogoReact },
       { name: "Zod", icon: SiZod },
     ],
-    thumbnail: "",
-    gallery: [],
+    thumbnail: EasyDrive_Front_Page,
+    gallery: [EasyDrive_Front_Page],
     repoUrl: "",
     liveUrl: "",
   },
