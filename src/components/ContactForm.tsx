@@ -9,8 +9,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Mail, Sparkles } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const contactSchema = z.object({
   name: z
@@ -32,11 +32,6 @@ const TEMPLATE_ID = "template_43xvq0m";
 const PUBLIC_KEY = "jE28kDvV4AGqgfN8t";
 
 export default function Contact() {
-  const navigate = useNavigate();
-
-  const handleGetInTouch = () => {
-    navigate("");
-  };
   const {
     register,
     handleSubmit,
@@ -83,7 +78,6 @@ export default function Contact() {
               {errors.name?.message}
             </p>
           </div>
-
           <div>
             <Input
               type="email"
@@ -94,7 +88,6 @@ export default function Contact() {
               {errors.email?.message}
             </p>
           </div>
-
           <div className="flex-1">
             <Textarea
               rows={8}
@@ -106,8 +99,11 @@ export default function Contact() {
               {errors.message?.message}
             </p>
           </div>
-
-          <Button type="submit" className="py-2 mt-6" disabled={isSubmitting}>
+          <Button
+            type="submit"
+            className="cursor-pointer py-6 mt-4"
+            disabled={isSubmitting}
+          >
             {isSubmitting ? "Sending..." : "Send Message"}
           </Button>
         </form>
@@ -171,13 +167,12 @@ export default function Contact() {
           </motion.div>
           {/* Buttons */}
           <div className="pt-8 flex flex-col sm:flex-row sm:justify-center gap-4">
-            <button
-              onClick={handleGetInTouch}
-              className="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors cursor-pointer"
-            >
-              Get In Touch
-              <ArrowUpRight className="w-4 h-4" />
-            </button>
+            <a href="http://www.linkedin.com/in/mohamad-g-210581156">
+              <button className="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors cursor-pointer">
+                Get In Touch
+                <ArrowUpRight className="w-4 h-4" />
+              </button>
+            </a>
             <Link to={"/projects"}>
               <button className="flex items-center justify-center gap-2 px-6 py-3 bg-muted text-foreground rounded-lg font-medium hover:bg-muted/80 transition-colors cursor-pointer">
                 View Projects
