@@ -30,46 +30,7 @@ import TeamManager_ProjectDetailsPage from "@/assets/images/projects/Team_Manage
 // Easy Drive
 import EasyDrive_FrontPage from "@/assets/images/projects/EasyDrive/EasyDrive-Front_Page.jpg";
 
-// Export all images as a single object, grouped by project for better organization
-// export const Images = {
-//   OMGDigital: {
-//     FrontPage: OMGDigital_FrontPage,
-//   },
-//   TrendMarket: {
-//     FrontPage: TrendMarket_FrontPage,
-//   },
-//   FoodHut: {
-//     FrontPage: FoodHut_FrontPage,
-//     MenuPage: FoodHut_MenuPage,
-//     OrderPage: FoodHut_OrderPage,
-//   },
-//   DriveAwayRental: {
-//     FrontPage: DriveAwayRental_FrontPage,
-//     ModelPage: DriveAwayRental_ModelPage,
-//     ContactPage: DriveAwayRental_ContactPage,
-//     TeamPage: DriveAwayRental_TeamPage,
-//     FeaturedCar: DriveAwayRental_FeaturedCar,
-//     RegisterPage: DriveAwayRental_RegisterPage,
-//   },
-//   UrbanNest: {
-//     FrontPage: UrbanNest_FrontPage,
-//     ProductPage: UrbanNest_ProductPage,
-//     ProductsPage: UrbanNest_ProductsPage,
-//     CartPage: UrbanNest_CartPage,
-//     CheckoutPage: UrbanNest_CheckoutPage,
-//   },
-//   TeamManager: {
-//     FrontPage: TeamManager_FrontPage,
-//     CreatePage: TeamManager_CreatePage,
-//     ProfilePage: TeamManager_ProfilePage,
-//     ProjectDetailsPage: TeamManager_ProjectDetailsPage,
-//   },
-//   EasyDrive: {
-//     FrontPage: EasyDrive_FrontPage,
-//   },
-// };
-
-// Export individual images for direct access if needed
+// Export individual images
 export {
   OMGDigital_FrontPage,
   TrendMarket_FrontPage,

@@ -205,48 +205,103 @@ import {
 } from "react-icons/si";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
+const SIZE = 25;
 
 const FRONTENDSKILLS = [
-  { name: "React", icon: <FaReact className="text-cyan-500" /> },
-  { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
-  { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400" /> },
-  { name: "DaisyUI", icon: <SiDaisyui className="text-fuchsia-500" /> },
-  { name: "shadcn/ui", icon: <SiShadcnui className="text-gray-500" /> },
-  { name: "Redux Toolkit", icon: <SiRedux className="text-purple-500" /> },
-  { name: "React Router", icon: <SiReactrouter className="text-rose-500" /> },
-  { name: "React Query", icon: <SiReactquery className="text-pink-500" /> },
-  { name: "Axios", icon: <SiAxios className="text-blue-400" /> },
-  { name: "Framer Motion", icon: <SiFramer className="text-indigo-500" /> },
-  { name: "Vite", icon: <SiVite className="text-purple-500" /> },
-  { name: "ESLint", icon: <SiEslint className="text-indigo-400" /> },
-  { name: "Lucide-React", icon: <SiLucide className="text-gray-500" /> },
-  { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
-  { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" /> },
+  { name: "React", icon: <FaReact className="text-cyan-500" size={SIZE} /> },
+  {
+    name: "TypeScript",
+    icon: <SiTypescript className="text-blue-500" size={SIZE} />,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: <SiTailwindcss className="text-teal-400" size={SIZE} />,
+  },
+  {
+    name: "DaisyUI",
+    icon: <SiDaisyui className="text-fuchsia-500" size={SIZE} />,
+  },
+  {
+    name: "shadcn/ui",
+    icon: <SiShadcnui className="text-gray-500" size={SIZE} />,
+  },
+  {
+    name: "Redux Toolkit",
+    icon: <SiRedux className="text-purple-500" size={SIZE} />,
+  },
+  {
+    name: "React Router",
+    icon: <SiReactrouter className="text-rose-500" size={SIZE} />,
+  },
+  {
+    name: "React Query",
+    icon: <SiReactquery className="text-pink-500" size={SIZE} />,
+  },
+  { name: "Axios", icon: <SiAxios className="text-blue-400" size={SIZE} /> },
+  {
+    name: "Framer Motion",
+    icon: <SiFramer className="text-indigo-500" size={SIZE} />,
+  },
+  { name: "Vite", icon: <SiVite className="text-purple-500" size={SIZE} /> },
+  {
+    name: "ESLint",
+    icon: <SiEslint className="text-indigo-400" size={SIZE} />,
+  },
+  {
+    name: "Lucide-React",
+    icon: <SiLucide className="text-gray-500" size={SIZE} />,
+  },
+  { name: "HTML5", icon: <FaHtml5 className="text-orange-500" size={SIZE} /> },
+  { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" size={SIZE} /> },
 ];
 
 const BACKENDSKILLS = [
-  { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
-  { name: "Express.js", icon: <SiExpress className="text-gray-500" /> },
-  { name: "MongoDB", icon: <SiMongodb className="text-green-600" /> },
-  { name: "Mongoose", icon: <SiMongoose className="text-red-500" /> },
-  { name: "GraphQL", icon: <SiGraphql className="text-pink-500" /> },
+  {
+    name: "Node.js",
+    icon: <FaNodeJs className="text-green-500" size={SIZE} />,
+  },
+  {
+    name: "Express.js",
+    icon: <SiExpress className="text-gray-500" size={SIZE} />,
+  },
+  {
+    name: "MongoDB",
+    icon: <SiMongodb className="text-green-600" size={SIZE} />,
+  },
+  {
+    name: "Mongoose",
+    icon: <SiMongoose className="text-red-500" size={SIZE} />,
+  },
+  {
+    name: "GraphQL",
+    icon: <SiGraphql className="text-pink-500" size={SIZE} />,
+  },
   {
     name: "Apollo Server",
-    icon: <SiApollographql className="text-indigo-500" />,
+    icon: <SiApollographql className="text-indigo-500" size={SIZE} />,
   },
-  { name: "Firebase", icon: <SiFirebase className="text-yellow-500" /> },
+  {
+    name: "Firebase",
+    icon: <SiFirebase className="text-yellow-500" size={SIZE} />,
+  },
 ];
 
 const DEVOPSSKILLS = [
-  { name: "Git", icon: <FaGitAlt className="text-orange-500" /> },
+  { name: "Git", icon: <FaGitAlt className="text-orange-500" size={SIZE} /> },
   {
     name: "GitHub",
-    icon: <FaGithub className="text-gray-800 dark:text-white" />,
+    icon: <FaGithub className="text-foreground" size={SIZE} />,
   },
-  { name: "NPM", icon: <FaNpm className="text-red-500" /> },
-  { name: "AWS", icon: <FaAws className="text-yellow-400" /> },
-  { name: "Vercel", icon: <SiVercel className="text-black dark:text-white" /> },
-  { name: "Netlify", icon: <SiNetlify className="text-teal-400" /> },
+  { name: "NPM", icon: <FaNpm className="text-red-500" size={SIZE} /> },
+  { name: "AWS", icon: <FaAws className="text-yellow-400" size={SIZE} /> },
+  {
+    name: "Vercel",
+    icon: <SiVercel className="text-foreground" size={SIZE} />,
+  },
+  {
+    name: "Netlify",
+    icon: <SiNetlify className="text-teal-400" size={SIZE} />,
+  },
 ];
 
 export default function TechnicalExpertise() {

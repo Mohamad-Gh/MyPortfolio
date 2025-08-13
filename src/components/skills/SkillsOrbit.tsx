@@ -44,7 +44,7 @@ const innerCircleSkills = [
 ];
 
 const SkillsOrbit = () => {
-  const K = 0.8;
+  const K = 1;
   const radiusScale = useResponsiveRadius();
   const orbitSize = 450 * radiusScale * K;
   const innerRadius = 135 * radiusScale * K;
