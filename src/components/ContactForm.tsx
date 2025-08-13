@@ -67,10 +67,11 @@ export default function Contact() {
   return (
     <section id="contact" className="py-10 space-y-6">
       <h2 className="text-2xl font-semibold text-center py-6">Contact Me</h2>
-      <div className="flex gap-6 sm:flex-col sm:items-center lg:flex-row ">
+
+      <div className="flex gap-6 flex-col lg:flex-row lg:items-start">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="space-y-4 w-1/2 flex flex-col justify-between"
+          className="space-y-4 w-full lg:w-1/2 flex flex-col justify-between"
         >
           <div>
             <Input placeholder="Your Name" {...register("name")} />
@@ -101,14 +102,15 @@ export default function Contact() {
           </div>
           <Button
             type="submit"
-            className="cursor-pointer py-6 mt-4"
+            className="cursor-pointer py-4 sm:py-6 mt-4 w-full"
             disabled={isSubmitting}
           >
             {isSubmitting ? "Sending..." : "Send Message"}
           </Button>
         </form>
+
         {/* Lets build something */}
-        <div className="w-1/2 flex flex-col justify-between">
+        <div className="w-full lg:w-1/2 flex flex-col justify-between mt-8 lg:mt-0">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <Sparkles className="w-5 h-5 text-primary" />
@@ -130,6 +132,7 @@ export default function Contact() {
               </p>
             </div>
           </div>
+
           {/* Links */}
           <motion.div
             className="flex justify-center gap-4 flex-wrap"
@@ -139,7 +142,7 @@ export default function Contact() {
             viewport={{ once: true }}
           >
             <a href="mailto:ghalebizadem@gmail.com" target="_blank">
-              <Button variant="outline">
+              <Button variant="outline" className="w-full sm:w-auto">
                 <Mail className="w-4 h-4 lg:mr-2 sm:mr-0" />
                 <span className="sm:hidden lg:flex">Email Me</span>
               </Button>
@@ -149,7 +152,7 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="outline">
+              <Button variant="outline" className="w-full sm:w-auto">
                 <FaGithub className="w-4 h-4 lg:mr-2 sm:mr-0" />
                 <span className="sm:hidden lg:flex">GitHub</span>
               </Button>
@@ -159,22 +162,23 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="outline">
+              <Button variant="outline" className="w-full sm:w-auto">
                 <FaLinkedin className="w-4 h-4 lg:mr-2 sm:mr-0" />
                 <span className="sm:hidden lg:flex">LinkedIn</span>
               </Button>
             </a>
           </motion.div>
+
           {/* Buttons */}
           <div className="pt-8 flex flex-col sm:flex-row sm:justify-center gap-4">
             <a href="http://www.linkedin.com/in/mohamad-g-210581156">
-              <button className="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors cursor-pointer">
+              <button className="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors cursor-pointer w-full sm:w-auto">
                 Get In Touch
                 <ArrowUpRight className="w-4 h-4" />
               </button>
             </a>
             <Link to={"/projects"}>
-              <button className="flex items-center justify-center gap-2 px-6 py-3 bg-muted text-foreground rounded-lg font-medium hover:bg-muted/80 transition-colors cursor-pointer">
+              <button className="flex items-center justify-center gap-2 px-6 py-3 bg-muted text-foreground rounded-lg font-medium hover:bg-muted/80 transition-colors cursor-pointer w-full sm:w-auto">
                 View Projects
                 <ArrowUpRight className="w-4 h-4" />
               </button>
