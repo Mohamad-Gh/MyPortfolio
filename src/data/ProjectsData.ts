@@ -80,34 +80,35 @@ export interface ProjectType {
 const projects: ProjectType[] = [
   {
     id: "1",
-    title: "Car Rental with Backend",
-    description: "working in progress ...",
+    title: "FullStack Car Rental App",
+    description: "work in progress ...",
     technologiesWithIcons: [
       { name: "Tailwind CSS", icon: SiTailwindcss },
       { name: "Vite", icon: SiVite },
       { name: "React Icons", icon: BiLogoReact },
       { name: "Firebase", icon: SiFirebase },
       { name: "GraphQL", icon: SiGraphql },
-      { name: "Apollo Server", icon: SiGraphql },
-      { name: "Apollo Client", icon: SiGraphql },
+      // { name: "Apollo Server", icon: SiGraphql },
+      // { name: "Apollo Client", icon: SiGraphql },
       { name: "MongoDB", icon: SiMongodb },
       { name: "bcryptjs", icon: RiKey2Fill },
       { name: "cookie-parser", icon: FaCookieBite },
-      { name: "dotenv" }, // No matching icon
+      // { name: "dotenv" }, // No matching icon
       { name: "Express", icon: SiExpress },
-      { name: "graphql-middleware", icon: SiGraphql },
+      // { name: "graphql-middleware", icon: SiGraphql },
       { name: "graphql-shield", icon: SiGraphql },
-      { name: "graphql-tag", icon: SiGraphql },
+      // { name: "graphql-tag", icon: SiGraphql },
       { name: "jsonwebtoken", icon: SiJsonwebtokens },
       { name: "Mongoose", icon: SiMongoose },
-      { name: "lucide-react" }, // No matching icon
-      { name: "react-hook-form", icon: BiLogoReact },
+      // { name: "lucide-react" }, // No matching icon
+      // { name: "react-hook-form", icon: BiLogoReact },
       { name: "React Router", icon: BiLogoReact },
       { name: "Zod", icon: SiZod },
     ],
     thumbnail: EasyDrive_Front_Page,
     gallery: [EasyDrive_Front_Page],
-    repoUrl: "",
+    repoUrl:
+      "https://github.com/Mohamad-Gh/GraphQL/tree/main/GraphQL_Node_React_Build_Car_Rental_App_with_Apollo",
     liveUrl: "",
   },
   {

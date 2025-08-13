@@ -175,6 +175,7 @@ import { type ProjectType } from "@/data/ProjectsData";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import TypingText from "./TypingText";
 
 export default function ProjectCard({
   title,
@@ -187,8 +188,13 @@ export default function ProjectCard({
   return (
     <div className="border rounded-xl p-6 space-y-4 bg-card shadow-md hover:shadow-lg transition-shadow">
       <h2 className="text-xl font-semibold">{title}</h2>
-      <p className=" h-24 text-muted-foreground line-clamp-4">{description}</p>
-
+      {description === "work in progress ..." ? (
+        <TypingText text={description} />
+      ) : (
+        <p className=" h-24 text-muted-foreground line-clamp-4">
+          {description}
+        </p>
+      )}
       {/* Carousel */}
       {gallery && gallery.length > 0 && (
         <Swiper
