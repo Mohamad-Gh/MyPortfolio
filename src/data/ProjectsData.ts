@@ -91,18 +91,17 @@ const projects: ProjectType[] = [
     title: "FullStack Car Rental App",
     description: "work in progress ...",
     technologiesWithIcons: [
-      { name: "Tailwind CSS", icon: SiTailwindcss },
       { name: "Vite", icon: SiVite },
-      { name: "React Icons", icon: BiLogoReact },
-      { name: "Firebase", icon: SiFirebase },
+      { name: "TypeScript", icon: SiTypescript },
       { name: "GraphQL", icon: SiGraphql },
+      { name: "MongoDB", icon: SiMongodb },
+      { name: "Express", icon: SiExpress },
+      { name: "Firebase", icon: SiFirebase },
       // { name: "Apollo Server", icon: SiGraphql },
       // { name: "Apollo Client", icon: SiGraphql },
-      { name: "MongoDB", icon: SiMongodb },
       { name: "bcryptjs", icon: RiKey2Fill },
       { name: "cookie-parser", icon: FaCookieBite },
       // { name: "dotenv" }, // No matching icon
-      { name: "Express", icon: SiExpress },
       // { name: "graphql-middleware", icon: SiGraphql },
       { name: "graphql-shield", icon: SiGraphql },
       // { name: "graphql-tag", icon: SiGraphql },
@@ -110,8 +109,11 @@ const projects: ProjectType[] = [
       { name: "Mongoose", icon: SiMongoose },
       // { name: "lucide-react" }, // No matching icon
       // { name: "react-hook-form", icon: BiLogoReact },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "React Icons", icon: BiLogoReact },
       { name: "React Router", icon: BiLogoReact },
       { name: "Zod", icon: SiZod },
+      { name: "Vercel", icon: SiVercel },
     ],
     thumbnail: EasyDrive_FrontPage,
     gallery: [EasyDrive_FrontPage],
@@ -125,11 +127,14 @@ const projects: ProjectType[] = [
     description:
       "A collaborative platform for managing team projects, allowing users to view online clients, create and assign projects, delete projects with appropriate permissions, update user profiles, and add comments to track project progress.",
     technologiesWithIcons: [
-      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "TypeScript", icon: SiTypescript },
+
       { name: "Vite", icon: SiVite },
+      { name: "Firebase", icon: SiFirebase },
       { name: "Redux", icon: SiRedux },
       { name: "React Icons", icon: BiLogoReact },
-      { name: "Firebase", icon: SiFirebase },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "Vercel", icon: SiVercel },
     ],
     thumbnail: TeamManager_FrontPage,
     gallery: [
@@ -150,6 +155,7 @@ const projects: ProjectType[] = [
     technologiesWithIcons: [
       { name: "Node.js", icon: FaNodeJs },
       { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "Firebase", icon: SiFirebase },
       { name: "React Toastify", icon: TbBrandReact },
       { name: "Redux", icon: SiRedux },
       { name: "React Router", icon: BiLogoReact },
@@ -158,7 +164,8 @@ const projects: ProjectType[] = [
       { name: "TypeScript", icon: SiTypescript },
       { name: "Vite", icon: SiVite },
       { name: "React Icons", icon: BiLogoReact },
-      { name: "Firebase", icon: SiFirebase },
+      { name: "Vercel", icon: SiVercel },
+
       // { name: "DaisyUI", icon: BiLogoTailwindCss },
     ],
     thumbnail: UrbanNest_FrontPage,
