@@ -46,7 +46,7 @@ export default function ProjectsPreview() {
                     <CardTitle className="text-lg">{project.title}</CardTitle>
                   </CardHeader>
 
-                  <p className="text-sm text-muted-foreground mb-4">
+                  <p className="text-sm text-muted-foreground mb-4 line-clamp-4">
                     {project.description}
                   </p>
 
