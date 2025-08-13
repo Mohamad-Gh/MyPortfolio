@@ -1,37 +1,45 @@
 import { type IconType } from "react-icons";
 
 // Images
-import OMGDigital_FrontPage from "@/assets/images/projects/OMGDigitals/OMGDigital_FrontPage.jpg";
-import TrendMarket_FrontPage from "@/assets/images/projects/Trend_Market/Trend_Market_FrontPage.jpg";
+import { OMGDigital_FrontPage } from "./images";
+import { TrendMarket_FrontPage } from "./images";
 
 // FoodHut Images
-import FoodHut_FrontPage from "@/assets/images/projects/Food_Hut_App/Food_Hut_Front_Page.jpg";
-import FoodHut_MenuPage from "@/assets/images/projects/Food_Hut_App/Food_Hut_Menu_Page.jpg";
-import FoodHut_OrderPage from "@/assets/images/projects/Food_Hut_App/Food_Hut_Order_Page.jpg";
+import {
+  FoodHut_FrontPage,
+  FoodHut_MenuPage,
+  FoodHut_OrderPage,
+} from "./images";
 
 // Drive Away Images
-import DriveAwayRental_FrontPage from "@/assets/images/projects/Drive_Away_Rental/Drive_Away_Rental_Front_Page.jpg";
-import DriveAwayRental_ModelPage from "@/assets/images/projects/Drive_Away_Rental/Drive_Away_Rental_Model_Page.jpg";
-import DriveAwayRental_ContactPage from "@/assets/images/projects/Drive_Away_Rental/Drive_Away_Rental_Contact_Page.jpg";
-import DriveAwayRental_TeamPage from "@/assets/images/projects/Drive_Away_Rental/Drive_Away_Rental_Team_Page.jpg";
-import DriveAwayRental_FeaturedCar from "@/assets/images/projects/Drive_Away_Rental/Drive_Away_Rental_Featured_Car.jpg";
-import DriveAwayRental_RegisterPage from "@/assets/images/projects/Drive_Away_Rental/Drive_Away_Rental_Register_Page.jpg";
+import {
+  DriveAwayRental_FrontPage,
+  DriveAwayRental_ModelPage,
+  DriveAwayRental_ContactPage,
+  DriveAwayRental_TeamPage,
+  DriveAwayRental_FeaturedCar,
+  DriveAwayRental_RegisterPage,
+} from "./images";
 
 // Urban Nest Images
-import UrbanNest_FrontPage from "@/assets/images/projects/Urban_Nest_Store/UrbanNext_Front_Page.jpg";
-import UrbanNest_ProductPage from "@/assets/images/projects/Urban_Nest_Store/UrbanNext_Product_Page.jpg";
-import UrbanNest_ProductsPage from "@/assets/images/projects/Urban_Nest_Store/UrbanNext_Products_Page.jpg";
-import UrbanNest_CartPage from "@/assets/images/projects/Urban_Nest_Store/UrbanNext_Cart_Page.jpg";
-import UrbanNest_CheckoutPage from "@/assets/images/projects/Urban_Nest_Store/UrbanNext_Checkout_Page.jpg";
+import {
+  UrbanNest_FrontPage,
+  UrbanNest_ProductPage,
+  UrbanNest_ProductsPage,
+  UrbanNest_CartPage,
+  UrbanNest_CheckoutPage,
+} from "./images";
 
 // Team Manager App
-import TeamManager_FrontPage from "@/assets/images/projects/Team_Management_App/Teams_App_Front_Page.jpg";
-import TeamManager_CreatePage from "@/assets/images/projects/Team_Management_App/Teams_App_Create_Page.jpg";
-import TeamManager_ProfilePage from "@/assets/images/projects/Team_Management_App/Teams_App_Profile_Page.jpg";
-import TeamManager_ProjectDetailsPage from "@/assets/images/projects/Team_Management_App/Teams_App_ProjectDetails_Page.jpg";
+import {
+  TeamManager_FrontPage,
+  TeamManager_CreatePage,
+  TeamManager_ProfilePage,
+  TeamManager_ProjectDetailsPage,
+} from "./images";
 
 //Easy Drive
-import EasyDrive_Front_Page from "@/assets/images/projects/EasyDrive/EasyDrive-Front_Page.jpg";
+import { EasyDrive_FrontPage } from "./images";
 
 // ICONS
 import { FaReact, FaNodeJs, FaGithub, FaGoogle } from "react-icons/fa";
@@ -105,8 +113,8 @@ const projects: ProjectType[] = [
       { name: "React Router", icon: BiLogoReact },
       { name: "Zod", icon: SiZod },
     ],
-    thumbnail: EasyDrive_Front_Page,
-    gallery: [EasyDrive_Front_Page],
+    thumbnail: EasyDrive_FrontPage,
+    gallery: [EasyDrive_FrontPage],
     repoUrl:
       "https://github.com/Mohamad-Gh/GraphQL/tree/main/GraphQL_Node_React_Build_Car_Rental_App_with_Apollo",
     liveUrl: "",
