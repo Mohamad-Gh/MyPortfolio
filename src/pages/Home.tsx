@@ -36,14 +36,18 @@ export default function App() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              Frontend Developer • React • Tailwind CSS • GraphQL
+              React • Next.js • TypeScript • Tailwind CSS • Redux • GraphQL •
+              Node.js • MongoDB • Firebase • Material UI
             </motion.p>
             {/* about  */}
             <p className="mt-10 text-center text-muted-foreground line-clamp-3">
-              Passionate frontend developer with experience in modern web
-              technologies including React, Tailwind, TypeScript, and GraphQL. I
-              focus on building scalable UI with clean, maintainable code and
-              user-centric design.
+              Frontend-focused fullstack developer experienced in building
+              high-performance web apps — from e-commerce stores and rental
+              platforms to team management tools — using React, Next.js,
+              Tailwind CSS, and TypeScript. Skilled in GraphQL, Node.js,
+              MongoDB, and Firebase, I craft scalable, maintainable, and
+              visually engaging interfaces backed by clean, efficient code and
+              modern deployment workflows.
             </p>
           </div>
           {/* <div className="hidden lg:flex lg:w-1/2"> */}
