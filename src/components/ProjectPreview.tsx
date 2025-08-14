@@ -49,7 +49,7 @@ export default function ProjectsPreview() {
   };
 
   return (
-    <section className="space-y-8">
+    <section className="space-y-8 mb-8">
       <div className="flex justify-between items-center flex-wrap gap-2">
         <h2 className="text-2xl font-semibold">Featured Projects</h2>
         <Link to="/projects" className="text-primary hover:underline text-sm">
@@ -64,7 +64,7 @@ export default function ProjectsPreview() {
                 <img
                   src={project.thumbnail}
                   alt={project.title}
-                  className="w-full h-52 object-contain rounded-t-sm"
+                  className="w-full h-48 object-cover rounded-t-md"
                 />
                 <CardContent className="flex flex-col justify-between p-4">
                   <CardHeader className="p-0 mb-2">
