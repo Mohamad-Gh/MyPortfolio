@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import { AnimatePresence } from "framer-motion";
+import { Analytics } from "@vercel/analytics/next";
 
 import "./index.css";
 import LoadingPage from "./pages/LoadingPage";
@@ -43,6 +44,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <Toaster richColors />
+    <Analytics />
     <Suspense fallback={<LoadingPage />}>
       <AnimatePresence mode="wait">
         <RouterProvider router={router} />
