@@ -10,8 +10,8 @@ export default function App() {
     <>
       {/* Hero Section */}
       <AnimatedBackgroundPattern />
-      <section className="text-center mt-20">
-        <div className="flex justify-center bg-background">
+      <section className="text-center mt-10">
+        <div className="flex justify-center">
           <div className="w-full lg:w-1/2">
             {
               <motion.img

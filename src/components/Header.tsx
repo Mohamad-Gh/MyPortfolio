@@ -57,8 +57,9 @@ export default function Header() {
   }, [isDark, sunControls, moonControls]);
 
   return (
-    <header className="relative z-10 flex justify-between items-center px-6 border-b border-border bg-background">
-      <div className="flex items-center space-x-8">
+    // border-b border-border
+    <header className="relative flex justify-between items-center px-6 bg-background ">
+      <div className="flex items-center space-x-8 ">
         {/* Pulsing Logo */}
         <Link to="/">
           <motion.img

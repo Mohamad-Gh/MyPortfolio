@@ -1,10 +1,10 @@
 const AnimatedBackgroundPattern = () => {
   return (
-    <div className="relative z-[-1]">
-      <div className="fixed inset-0 overflow-hidden">
+    <div className="relative -z-10">
+      <div className="fixed inset-0 overflow-hidden ">
         {/* Grid Pattern */}
         {/* animate-pulse removed */}
-        <div className="absolute inset-0 opacity-20 animate-pulse ">
+        <div className="absolute inset-0 opacity-10 animate-pulse">
           <svg
             className="w-full h-full"
             xmlns="http://www.w3.org/2000/svg"
@@ -14,12 +14,12 @@ const AnimatedBackgroundPattern = () => {
             <defs>
               <pattern
                 id="grid"
-                width="8"
-                height="8"
+                width="6"
+                height="6"
                 patternUnits="userSpaceOnUse"
               >
                 <path
-                  d="M 8 0 L 0 0 0 8"
+                  d="M 6 0 L 0 0 0 6"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="0.1"

@@ -7,7 +7,7 @@ function Layout() {
     <div className="max-w-6xl mx-auto">
       <Header />
       <ScrollToTopButton />
-      <main className="min-h-screen bg-background text-foreground p-6">
+      <main className="min-h-screen p-6">
         <Outlet />
       </main>
       <Footer />
