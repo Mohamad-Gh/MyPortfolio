@@ -9,10 +9,10 @@ export default function App() {
   return (
     <>
       {/* Hero Section */}
+      <AnimatedBackgroundPattern />
       <section className="text-center mt-20">
-        <AnimatedBackgroundPattern />
-        <div className="flex justify-between">
-          <div className="w-full lg:w-1/2 z-1 ">
+        <div className="flex justify-center bg-background">
+          <div className="w-full lg:w-1/2">
             {
               <motion.img
                 src={ProfileImage}

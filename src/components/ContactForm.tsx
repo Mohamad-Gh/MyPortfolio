@@ -65,7 +65,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-10 space-y-6">
+    <section id="contact" className="p-10 space-y-6  bg-background shadow-2xl">
       <h2 className="text-2xl font-semibold text-center py-6">Contact Me</h2>
 
       <div className="flex gap-6 flex-col lg:flex-row lg:items-start">
