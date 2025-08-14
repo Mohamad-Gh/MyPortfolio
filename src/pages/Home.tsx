@@ -4,13 +4,15 @@ import ContactForm from "@/components/ContactForm";
 import SkillsOrbit from "@/components/skills/SkillsOrbit";
 import TechnicalExpertise from "@/components/TechnicalExpertise";
 import ProfileImage from "@/assets/images/Profile/profilePicture.jpg";
+import AnimatedBackgroundPattern from "@/components/AnimatedBackgroundPattern";
 export default function App() {
   return (
     <>
       {/* Hero Section */}
       <section className="text-center mt-20">
+        <AnimatedBackgroundPattern />
         <div className="flex justify-between">
-          <div className="w-full lg:w-1/2 ">
+          <div className="w-full lg:w-1/2 z-1 ">
             {
               <motion.img
                 src={ProfileImage}
