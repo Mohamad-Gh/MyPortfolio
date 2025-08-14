@@ -74,7 +74,7 @@ const SkillsOrbit = () => {
   ];
 
   return (
-    <div className="hidden lg:flex justify-center items-center mt-10 mb-4 md:mb-0">
+    <div className="hidden w-1/2 rounded-full bg-background shadow lg:flex justify-center items-center md:mb-0 ">
       <motion.div
         className="relative flex flex-col items-center justify-center w-full max-w-sm h-auto"
         initial={{ opacity: 0 }}
