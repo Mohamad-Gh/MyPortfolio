@@ -2,7 +2,8 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t border-border py-6 px-4 md:px-8 text-sm text-muted-foreground">
+    // border-t border-border
+    <footer className="w-full  py-6 px-4 md:px-8 text-sm text-muted-foreground">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-center md:text-left">
           © {new Date().getFullYear()} Mohamad Ghalebizade. All rights reserved.
