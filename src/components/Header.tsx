@@ -58,7 +58,7 @@ export default function Header() {
 
   return (
     // border-b border-border
-    <header className="relative flex justify-between items-center px-6 bg-background ">
+    <header className="relative flex justify-between items-center px-6  ">
       <div className="flex items-center space-x-8 ">
         {/* Pulsing Logo */}
         <Link to="/">

@@ -3,8 +3,7 @@ const AnimatedBackgroundPattern = () => {
     <div className="relative -z-10">
       <div className="fixed inset-0 overflow-hidden ">
         {/* Grid Pattern */}
-        {/* animate-pulse removed */}
-        <div className="absolute inset-0 opacity-10 animate-pulse">
+        <div className="absolute inset-0 opacity-5 animate-pulse">
           <svg
             className="w-full h-full"
             xmlns="http://www.w3.org/2000/svg"
