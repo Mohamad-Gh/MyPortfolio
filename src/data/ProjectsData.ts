@@ -110,8 +110,8 @@ const projects: ProjectType[] = [
       // { name: "lucide-react" }, // No matching icon
       // { name: "react-hook-form", icon: BiLogoReact },
       { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "React Icons", icon: BiLogoReact },
-      { name: "React Router", icon: BiLogoReact },
+      // { name: "React Icons", icon: BiLogoReact },
+      // { name: "React Router", icon: BiLogoReact },
       { name: "Zod", icon: SiZod },
       { name: "Vercel", icon: SiVercel },
     ],
