@@ -122,32 +122,6 @@ const projects: ProjectType[] = [
     liveUrl: "",
   },
   {
-    id: "2",
-    title: "Teams Manager App",
-    description:
-      "A collaborative platform for managing team projects, allowing users to view online clients, create and assign projects, delete projects with appropriate permissions, update user profiles, and add comments to track project progress.",
-    technologiesWithIcons: [
-      { name: "TypeScript", icon: SiTypescript },
-
-      { name: "Vite", icon: SiVite },
-      { name: "Firebase", icon: SiFirebase },
-      { name: "Redux", icon: SiRedux },
-      { name: "React Icons", icon: BiLogoReact },
-      { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "Vercel", icon: SiVercel },
-    ],
-    thumbnail: TeamManager_FrontPage,
-    gallery: [
-      TeamManager_FrontPage,
-      TeamManager_CreatePage,
-      TeamManager_ProfilePage,
-      TeamManager_ProjectDetailsPage,
-    ],
-    repoUrl:
-      "https://github.com/Mohamad-Gh/Reacts_Apps/tree/main/project_Management_Site",
-    liveUrl: "https://teams-manager-app-live.com",
-  },
-  {
     id: "3",
     title: "Urban Nest Store",
     description:
@@ -178,6 +152,32 @@ const projects: ProjectType[] = [
     ],
     repoUrl: "https://github.com/Mohamad-Gh/Reacts_Apps/tree/main/UrbanNest",
     liveUrl: "https://urban-nest-7c715.web.app/",
+  },
+  {
+    id: "3",
+    title: "Teams Manager App",
+    description:
+      "A collaborative platform for managing team projects, allowing users to view online clients, create and assign projects, delete projects with appropriate permissions, update user profiles, and add comments to track project progress.",
+    technologiesWithIcons: [
+      { name: "TypeScript", icon: SiTypescript },
+
+      { name: "Vite", icon: SiVite },
+      { name: "Firebase", icon: SiFirebase },
+      { name: "Redux", icon: SiRedux },
+      { name: "React Icons", icon: BiLogoReact },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "Vercel", icon: SiVercel },
+    ],
+    thumbnail: TeamManager_FrontPage,
+    gallery: [
+      TeamManager_FrontPage,
+      TeamManager_CreatePage,
+      TeamManager_ProfilePage,
+      TeamManager_ProjectDetailsPage,
+    ],
+    repoUrl:
+      "https://github.com/Mohamad-Gh/Reacts_Apps/tree/main/project_Management_Site",
+    liveUrl: "https://teams-manager-app-live.com",
   },
   {
     id: "4",
