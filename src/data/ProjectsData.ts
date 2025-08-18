@@ -122,7 +122,7 @@ const projects: ProjectType[] = [
     liveUrl: "",
   },
   {
-    id: "3",
+    id: "2",
     title: "Urban Nest Store",
     description:
       "An e-commerce platform with integrated front-end and back-end using Firebase, enabling users to browse products, add items to their cart, and complete purchases seamlessly.",
@@ -177,7 +177,7 @@ const projects: ProjectType[] = [
     ],
     repoUrl:
       "https://github.com/Mohamad-Gh/Reacts_Apps/tree/main/project_Management_Site",
-    liveUrl: "https://teams-manager-app-live.com",
+    liveUrl: "https://reacts-apps-vyns.vercel.app/login",
   },
   {
     id: "4",
