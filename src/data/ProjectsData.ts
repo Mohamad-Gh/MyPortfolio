@@ -177,7 +177,7 @@ const projects: ProjectType[] = [
     ],
     repoUrl:
       "https://github.com/Mohamad-Gh/Reacts_Apps/tree/main/project_Management_Site",
-    liveUrl: "https://reacts-apps-vyns.vercel.app/login",
+    liveUrl: "https://reacts-apps-vyns.vercel.app",
   },
   {
     id: "4",
