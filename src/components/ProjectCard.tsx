@@ -186,12 +186,12 @@ export default function ProjectCard({
   repoUrl,
 }: ProjectType) {
   return (
-    <div className="border rounded-xl p-6 space-y-4 bg-card shadow-md hover:shadow-lg transition-shadow">
-      <h2 className="text-xl font-semibold">{title}</h2>
+    <div className="border rounded-xl p-4 sm:p-6 space-y-4 bg-card shadow-md hover:shadow-lg transition-shadow">
+      <h2 className="text-lg sm:text-xl font-semibold">{title}</h2>
       {description === "work in progress ..." ? (
         <TypingText text={description} />
       ) : (
-        <p className=" h-24 text-muted-foreground line-clamp-4">
+        <p className=" text-muted-foreground line-clamp-3 sm:line-clamp-4">
           {description}
         </p>
       )}
@@ -211,7 +211,7 @@ export default function ProjectCard({
               <img
                 src={imgSrc}
                 alt={`${title} image ${idx + 1}`}
-                className="w-full h-48 object-cover"
+                className="w-full h-40 sm:h-48 md:h-56 object-contain mb-10"
               />
             </SwiperSlide>
           ))}
@@ -226,7 +226,7 @@ export default function ProjectCard({
             return Icon ? (
               <Tooltip key={i}>
                 <TooltipTrigger asChild>
-                  <span className="text-xl" aria-label={tech.name}>
+                  <span className="text-lg sm:text-xl" aria-label={tech.name}>
                     <Icon />
                   </span>
                 </TooltipTrigger>
@@ -247,7 +247,7 @@ export default function ProjectCard({
       </div>
 
       {/* Links */}
-      <div className="flex gap-4 mt-4">
+      <div className="flex flex-wrap gap-2 sm:gap-4 mt-4">
         {repoUrl && (
           <a
             href={repoUrl}

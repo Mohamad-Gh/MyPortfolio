@@ -13,7 +13,7 @@ export default function Projects() {
   return (
     <main className="px-6 py-12 space-y-12">
       <h1 className="text-3xl font-bold">Projects</h1>
-      <div className="grid gap-8 md:grid-cols-2">
+      <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
         {projects.map((project) => (
           <ProjectCard key={project.id} {...project} />
         ))}
