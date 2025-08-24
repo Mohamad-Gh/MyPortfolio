@@ -1,7 +1,7 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Sun, Moon } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import DarkLogo from "@/assets/images/Logos/NeonLogo.png";
 import LightLogo from "@/assets/images/Logos/NeonLogo.png";
 
@@ -79,12 +79,27 @@ export default function Header() {
           />
         </Link>
         <nav className="flex gap-4 text-sm font-medium">
-          <Link to="/" className="hover:underline hover:text-primary">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? "text-primary underline underline-offset-4"
+                : "undefine"
+            }
+          >
             Home
-          </Link>
-          <Link to="/projects" className="hover:underline hover:text-primary">
+          </NavLink>
+
+          <NavLink
+            to="/projects"
+            className={({ isActive }) =>
+              isActive
+                ? "text-primary underline underline-offset-4"
+                : "undefine"
+            }
+          >
             Projects
-          </Link>
+          </NavLink>
         </nav>
       </div>
 
